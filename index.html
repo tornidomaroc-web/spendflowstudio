@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpendFlow Studio - Money systems that feel calm</title>
+  <meta name="description" content="Fifty spreadsheet templates for budgeting, weddings, real estate, and investing. Built in Excel and Google Sheets. Yours to keep, forever.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- Enable motion only when JS is on AND the visitor has not asked for reduced motion.
+       Without this class the page renders fully visible and static. -->
+  <script>
+    (function(){
+      try{
+        if(!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)){
+          document.documentElement.className += ' motion-ok';
+        }
+      }catch(e){}
+    })();
+  </script>
+</head>
+<body>
+
+<div style="background:#FBF5EC; min-height:100vh; overflow-x:hidden;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(251,245,236,0.94); backdrop-filter:saturate(1.1); border-bottom:1px solid #E7DBC8;">
+    <div style="max-width:1200px; margin:0 auto; padding:14px clamp(20px,5vw,48px); display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+      <a href="index.html" style="display:flex; align-items:center; gap:11px; text-decoration:none; margin-right:auto;">
+        <span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#C8A24A 0%,#C2683F 100%); display:inline-flex; align-items:center; justify-content:center; box-shadow:0 3px 8px -3px rgba(194,104,63,0.6);"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h7" stroke="#FFFCF7" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+        <span style="font-family:Fraunces,Georgia,serif; font-size:19px; font-weight:600; letter-spacing:-0.01em;"><span style="color:#33291F;">SpendFlow</span> <span style="color:#6B5A4A;">Studio</span></span>
+      </a>
+      <nav style="display:flex; align-items:center; gap:26px;">
+        <a class="nav-link" href="shop.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Shop</a>
+        <a class="nav-link" href="bundles.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Bundles</a>
+        <a class="nav-link" href="shop.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Money</a>
+        <a class="nav-link" href="shop.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Life &amp; Home</a>
+        <a class="nav-link" href="about.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">About</a>
+      </nav>
+      <button class="cart-btn" aria-label="Cart" style="position:relative; width:40px; height:40px; border:1px solid #E7DBC8; background:#FFFCF7; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 7h12l-1 12H7L6 7Z" stroke="#33291F" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7a3 3 0 0 1 6 0" stroke="#33291F" stroke-width="1.6"/></svg><span style="position:absolute; top:-6px; right:-6px; min-width:17px; height:17px; padding:0 4px; border-radius:999px; background:#C2683F; color:#FFFCF7; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; display:inline-flex; align-items:center; justify-content:center;">2</span></button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(48px,7vw,92px) clamp(20px,5vw,48px);">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:clamp(32px,5vw,64px); align-items:center;">
+      <div data-reveal>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:#C2683F;">Digital download · Instant access</div>
+        <h1 style="margin:18px 0 0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(42px,6.2vw,68px); line-height:1.02; letter-spacing:-0.02em; color:#33291F; text-wrap:balance;">Money systems that feel calm.</h1>
+        <p style="margin:22px 0 0; max-width:32ch; font-size:17px; line-height:1.65; color:#6B5A4A;">Fifty spreadsheet templates for budgeting, weddings, real estate, and investing. Built in Excel and Google Sheets. Yours to keep, forever.</p>
+        <div style="margin-top:30px; display:flex; gap:14px; flex-wrap:wrap;">
+          <a class="btn-primary" href="shop.html" style="padding:14px 26px; border:none; border-radius:12px; background:#C2683F; color:#FFFCF7; font-size:15px; font-weight:600; cursor:pointer; text-decoration:none;">Browse the shop</a>
+          <a class="btn-secondary" href="bundles.html" style="padding:14px 26px; border:1px solid #D9CAB1; border-radius:12px; background:transparent; color:#33291F; font-size:15px; font-weight:600; cursor:pointer; text-decoration:none;">See the bundles</a>
+        </div>
+        <div style="margin-top:28px; font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:0.03em; color:#6B5A4A;">4.9 average · 12,000+ downloads · Excel and Google Sheets</div>
+      </div>
+
+      <div data-reveal data-reveal-delay="120" style="background:#FFFCF7; border:1px solid #E7DBC8; border-radius:16px; overflow:hidden; box-shadow:0 24px 60px -34px rgba(51,41,31,0.4);">
+        <div style="display:flex; align-items:center; gap:8px; padding:12px 16px; background:#F2EBDE; border-bottom:1px solid #E7DBC8;">
+          <span style="width:11px; height:11px; border-radius:999px; background:#C2683F;"></span><span style="width:11px; height:11px; border-radius:999px; background:#C8A24A;"></span><span style="width:11px; height:11px; border-radius:999px; background:#9DAE8C;"></span>
+          <span style="margin-left:10px; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#6B5A4A;">spending-flow-2026.xlsx</span>
+        </div>
+        <div style="padding:26px; display:flex; gap:26px; align-items:center; flex-wrap:wrap;">
+          <div style="position:relative; width:152px; height:152px; flex:none;">
+            <svg width="152" height="152" viewBox="0 0 152 152" aria-hidden="true">
+              <circle cx="76" cy="76" r="60" fill="none" stroke="#EAD7A6" stroke-width="15"/>
+              <circle cx="76" cy="76" r="60" fill="none" stroke="#C2683F" stroke-width="15" stroke-linecap="round" stroke-dasharray="275 377" stroke-dashoffset="0" data-draw="275" data-draw-delay="200" transform="rotate(-90 76 76)"/>
+            </svg>
+            <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;"><span style="font-family:Fraunces,Georgia,serif; font-size:46px; font-weight:600; color:#33291F; line-height:1;" data-count-to="73">73</span><span style="font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:#6B5A4A; margin-top:4px;">Budget health</span></div>
+          </div>
+          <div style="flex:1; min-width:170px; display:flex; flex-direction:column; gap:15px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><span style="font-size:12.5px; font-weight:600;">Net worth</span><span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6B5A4A;">$184,200.00</span></div>
+              <svg width="100%" height="34" viewBox="0 0 220 34" preserveAspectRatio="none"><path d="M2 30 L44 26 L88 22 L132 15 L176 10 L218 3" pathLength="100" fill="none" stroke="#9DAE8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="0" data-draw="100" data-draw-delay="450"/></svg>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><span style="font-size:12.5px; font-weight:600;">Savings rate</span><span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6B5A4A;">26%</span></div>
+              <div style="height:7px; border-radius:999px; background:#F2EBDE;"><div style="width:52%; height:100%; border-radius:999px; background:#C8A24A;" data-grow="52%" data-grow-delay="350"></div></div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;"><span style="font-size:12.5px; font-weight:600;">Saved</span><span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6B5A4A;">$1,790.00</span></div>
+              <div style="height:7px; border-radius:999px; background:#F2EBDE;"><div style="width:34%; height:100%; border-radius:999px; background:#9DAE8C;" data-grow="34%" data-grow-delay="500"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section style="background:#F3ECDF; border-top:1px solid #E7DBC8; border-bottom:1px solid #E7DBC8;">
+    <div style="max-width:1200px; margin:0 auto; padding:clamp(28px,3.5vw,40px) clamp(20px,5vw,48px); display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:24px;">
+      <div data-reveal data-reveal-delay="0" style="text-align:center;"><div style="font-family:Fraunces,Georgia,serif; font-size:clamp(30px,3.4vw,40px); font-weight:600; color:#33291F; line-height:1;"><span data-count-to="50">50</span></div><div style="margin-top:8px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6B5A4A;">Templates</div></div>
+      <div data-reveal data-reveal-delay="80" style="text-align:center;"><div style="font-family:Fraunces,Georgia,serif; font-size:clamp(30px,3.4vw,40px); font-weight:600; color:#33291F; line-height:1;"><span data-count-to="12000" data-count-suffix="+">12,000+</span></div><div style="margin-top:8px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6B5A4A;">Downloads</div></div>
+      <div data-reveal data-reveal-delay="160" style="text-align:center;"><div style="font-family:Fraunces,Georgia,serif; font-size:clamp(30px,3.4vw,40px); font-weight:600; color:#33291F; line-height:1;"><span data-count-to="4.9" data-count-decimals="1">4.9</span></div><div style="margin-top:8px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6B5A4A;">Average rating</div></div>
+      <div data-reveal data-reveal-delay="240" style="text-align:center;"><div style="font-family:Fraunces,Georgia,serif; font-size:clamp(22px,2.4vw,28px); font-weight:600; color:#33291F; line-height:1.1;">Excel &amp; Sheets</div><div style="margin-top:9px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6B5A4A;">Works everywhere</div></div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED BUNDLES ============ -->
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(56px,7vw,88px) clamp(20px,5vw,48px) clamp(28px,4vw,40px);">
+    <div data-reveal style="display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:32px;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#9DAE8C;">Bundles</div>
+        <h2 style="margin:12px 0 0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(28px,3.8vw,42px); line-height:1.05; letter-spacing:-0.015em; color:#33291F;">Save more with a system</h2>
+      </div>
+      <a class="link-cta" href="shop.html" style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#C2683F; text-decoration:none; white-space:nowrap;">Browse all →</a>
+    </div>
+    <div id="home-bundles-grid" style="display:grid; gap:24px;">
+
+      <div data-reveal data-reveal-delay="0">
+        <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+          <article class="pcard pcard--bundles">
+            <div class="pcard__field">
+              <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+              <div class="pcard__top">
+                <span class="pcard__eyebrow">Bundle</span>
+                <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+              </div>
+              <div class="pcard__titlewrap">
+                <h3 class="pcard__title">Self-Employed Money System</h3>
+                <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__desc">Everything a self-employed person needs to run their money in one system.</p>
+              <div class="pcard__prices">
+                <span class="pcard__launch">$28.99</span>
+                <span class="pcard__original">$39.99</span>
+                <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+              </div>
+              <button class="pcard__cart" type="button">Add to Cart</button>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div data-reveal data-reveal-delay="80">
+        <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+          <article class="pcard pcard--bundles">
+            <div class="pcard__field">
+              <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+              <div class="pcard__top">
+                <span class="pcard__eyebrow">Bundle</span>
+                <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+              </div>
+              <div class="pcard__titlewrap">
+                <h3 class="pcard__title">The Money Bundle</h3>
+                <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__desc">Spending, savings, bills, and debt. The four money trackers most people actually use.</p>
+              <div class="pcard__prices">
+                <span class="pcard__launch">$17.99</span>
+                <span class="pcard__original">$24.99</span>
+                <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+              </div>
+              <button class="pcard__cart" type="button">Add to Cart</button>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div data-reveal data-reveal-delay="160">
+        <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+          <article class="pcard pcard--bundles">
+            <div class="pcard__field">
+              <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+              <div class="pcard__top">
+                <span class="pcard__eyebrow">Bundle</span>
+                <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+              </div>
+              <div class="pcard__titlewrap">
+                <h3 class="pcard__title">Wedding Planner Bundle</h3>
+                <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__desc">Four wedding sheets in one. Budget, guests, vendor risk, and the day timeline.</p>
+              <div class="pcard__prices">
+                <span class="pcard__launch">$25.00</span>
+                <span class="pcard__original">$34.99</span>
+                <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+              </div>
+              <button class="pcard__cart" type="button">Add to Cart</button>
+            </div>
+          </article>
+        </a>
+      </div>
+
+      <div data-reveal data-reveal-delay="240">
+        <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+          <article class="pcard pcard--bundles">
+            <div class="pcard__field">
+              <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+              <div class="pcard__top">
+                <span class="pcard__eyebrow">Bundle</span>
+                <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+              </div>
+              <div class="pcard__titlewrap">
+                <h3 class="pcard__title">Real Estate Bundle</h3>
+                <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+              </div>
+            </div>
+            <div class="pcard__body">
+              <p class="pcard__desc">Five real estate sheets covering buying, hunting, renovating, moving, and upkeep.</p>
+              <div class="pcard__prices">
+                <span class="pcard__launch">$28.99</span>
+                <span class="pcard__original">$39.99</span>
+                <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+              </div>
+              <button class="pcard__cart" type="button">Add to Cart</button>
+            </div>
+          </article>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ BESTSELLERS ============ -->
+  <section style="background:#F3ECDF;">
+    <div style="max-width:1200px; margin:0 auto; padding:clamp(56px,7vw,88px) clamp(20px,5vw,48px);">
+      <div data-reveal style="margin-bottom:32px;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#C2683F;">Reader favorites</div>
+        <h2 style="margin:12px 0 0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(28px,3.8vw,42px); line-height:1.05; letter-spacing:-0.015em; color:#33291F;">Most loved this month</h2>
+      </div>
+      <div id="home-bestsellers-grid" style="display:grid; gap:24px;">
+
+        <div data-reveal data-reveal-delay="0">
+          <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+            <article class="pcard pcard--lifehome">
+              <div class="pcard__field">
+                <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+                <div class="pcard__top">
+                  <span class="pcard__eyebrow">Life &amp; Home</span>
+                  <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                  <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+                </div>
+                <div class="pcard__titlewrap">
+                  <h3 class="pcard__title">Book Tracker</h3>
+                  <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+                </div>
+              </div>
+              <div class="pcard__body">
+                <p class="pcard__desc">Log every book you read, get a reading score, and see your year wrapped up.</p>
+                <div class="pcard__prices">
+                  <span class="pcard__launch">$21.00</span>
+                  <span class="pcard__original">$29.00</span>
+                  <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+                </div>
+                <button class="pcard__cart" type="button">Add to Cart</button>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <div data-reveal data-reveal-delay="80">
+          <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+            <article class="pcard pcard--realestate">
+              <div class="pcard__field">
+                <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+                <div class="pcard__top">
+                  <span class="pcard__eyebrow">Real Estate</span>
+                  <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                  <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+                </div>
+                <div class="pcard__titlewrap">
+                  <h3 class="pcard__title">Home Affordability Calculator</h3>
+                  <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+                </div>
+              </div>
+              <div class="pcard__body">
+                <p class="pcard__desc">See exactly what home you can afford and compare mortgages before you commit.</p>
+                <div class="pcard__prices">
+                  <span class="pcard__launch">$8.99</span>
+                  <span class="pcard__original">$11.99</span>
+                  <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+                </div>
+                <button class="pcard__cart" type="button">Add to Cart</button>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <div data-reveal data-reveal-delay="160">
+          <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+            <article class="pcard pcard--money">
+              <div class="pcard__field">
+                <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+                <div class="pcard__top">
+                  <span class="pcard__eyebrow">Money</span>
+                  <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                  <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+                </div>
+                <div class="pcard__titlewrap">
+                  <h3 class="pcard__title">Couples Budget System</h3>
+                  <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+                </div>
+              </div>
+              <div class="pcard__body">
+                <p class="pcard__desc">Manage money together as a couple with shared budgets and fair bill splits.</p>
+                <div class="pcard__prices">
+                  <span class="pcard__launch">$8.99</span>
+                  <span class="pcard__original">$11.99</span>
+                  <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+                </div>
+                <button class="pcard__cart" type="button">Add to Cart</button>
+              </div>
+            </article>
+          </a>
+        </div>
+
+        <div data-reveal data-reveal-delay="240">
+          <a class="card-link" href="product.html" style="text-decoration:none; color:inherit; display:block; border-radius:16px;">
+            <article class="pcard pcard--investing">
+              <div class="pcard__field">
+                <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+                <div class="pcard__top">
+                  <span class="pcard__eyebrow">Investing</span>
+                  <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+                  <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+                </div>
+                <div class="pcard__titlewrap">
+                  <h3 class="pcard__title">Wealth Command Center</h3>
+                  <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+                </div>
+              </div>
+              <div class="pcard__body">
+                <p class="pcard__desc">One honest Money Health Score for your whole financial life, plus a FIRE finish line.</p>
+                <div class="pcard__prices">
+                  <span class="pcard__launch">$10.99</span>
+                  <span class="pcard__original">$14.99</span>
+                  <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+                </div>
+                <button class="pcard__cart" type="button">Add to Cart</button>
+              </div>
+            </article>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY SPENDFLOW ============ -->
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(56px,7vw,88px) clamp(20px,5vw,48px);">
+    <div data-reveal style="margin-bottom:36px; max-width:600px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#9DAE8C;">Why SpendFlow</div>
+      <h2 style="margin:12px 0 0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(28px,3.8vw,42px); line-height:1.05; letter-spacing:-0.015em; color:#33291F;">Calm by design, honest by default</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:24px;">
+      <div data-reveal data-reveal-delay="0" style="background:#FFFCF7; border:1px solid #E7DBC8; border-radius:16px; padding:28px;">
+        <span style="width:50px; height:50px; border-radius:12px; background:#F1E4BE; display:inline-flex; align-items:center; justify-content:center;"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="5" y="8" width="22" height="16" rx="2.5" stroke="#A9842F" stroke-width="1.6"/><path d="M5 13h22M12 8v16" stroke="#A9842F" stroke-width="1.6"/></svg></span>
+        <h3 style="margin:18px 0 0; font-family:Fraunces,Georgia,serif; font-size:22px; font-weight:600; color:#33291F;">Built in Excel and Google Sheets</h3>
+        <p style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#6B5A4A;">Open it anywhere. No new app to learn, and no lock-in.</p>
+      </div>
+      <div data-reveal data-reveal-delay="120" style="background:#FFFCF7; border:1px solid #E7DBC8; border-radius:16px; padding:28px;">
+        <span style="width:50px; height:50px; border-radius:12px; background:#F1E4BE; display:inline-flex; align-items:center; justify-content:center;"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 6v14M16 20l-6-6M16 20l6-6" stroke="#A9842F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 25h18" stroke="#A9842F" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <h3 style="margin:18px 0 0; font-family:Fraunces,Georgia,serif; font-size:22px; font-weight:600; color:#33291F;">Instant download, yours forever</h3>
+        <p style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#6B5A4A;">Buy once and keep it. Free updates, and no subscription.</p>
+      </div>
+      <div data-reveal data-reveal-delay="240" style="background:#FFFCF7; border:1px solid #E7DBC8; border-radius:16px; padding:28px;">
+        <span style="width:50px; height:50px; border-radius:12px; background:#F1E4BE; display:inline-flex; align-items:center; justify-content:center;"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="rgba(51,41,31,0.16)" stroke-width="3.4"/><circle cx="16" cy="16" r="11" stroke="#A9842F" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="48 69" transform="rotate(-90 16 16)"/></svg></span>
+        <h3 style="margin:18px 0 0; font-family:Fraunces,Georgia,serif; font-size:22px; font-weight:600; color:#33291F;">Real formulas, nothing to set up</h3>
+        <p style="margin:10px 0 0; font-size:15px; line-height:1.6; color:#6B5A4A;">Replace the sample numbers. Every total and chart updates itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ATMOSPHERE BAND ============ -->
+  <section style="background:#2C231A; color:#FFFCF7; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:radial-gradient(115% 130% at 14% 22%, rgba(200,162,74,0.18) 0%, rgba(194,104,63,0.07) 36%, rgba(44,35,26,0) 68%);"></div>
+    <svg width="100%" height="100%" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true" style="position:absolute; inset:0; opacity:0.6;">
+      <g stroke="rgba(234,215,166,0.09)" stroke-width="1"><line x1="0" y1="60" x2="1200" y2="60"/><line x1="0" y1="120" x2="1200" y2="120"/><line x1="0" y1="180" x2="1200" y2="180"/></g>
+    </svg>
+    <div data-reveal style="position:relative; max-width:1200px; margin:0 auto; padding:clamp(44px,5vw,64px) clamp(20px,5vw,48px);">
+      <div style="max-width:660px; margin:0 auto; text-align:center;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:#C8A24A;">The reading nook</div>
+        <p style="margin:16px 0 0; font-family:Fraunces,Georgia,serif; font-weight:500; font-size:clamp(28px,3.8vw,42px); line-height:1.15; color:#FFFCF7;">Made for the quiet hour, a coffee,<br>and a plan that finally fits.</p>
+        <div style="margin-top:16px; font-size:15px; line-height:1.6; color:#D9CAB1;">No hustle. No noise. Just a calmer way to hold your money.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(56px,7vw,88px) clamp(20px,5vw,48px);">
+    <div data-reveal style="margin-bottom:36px;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#9DAE8C;">In their words</div>
+      <h2 style="margin:12px 0 0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(28px,3.8vw,42px); line-height:1.05; letter-spacing:-0.015em; color:#33291F;">Quietly, it works</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:24px;">
+      <figure data-reveal data-reveal-delay="0" style="margin:0; background:#FFFCF7; border:1px solid #E7DBC8; border-radius:16px; padding:28px; display:flex; flex-direction:column; gap:18px;">
+        <div style="color:#C8A24A; font-family:Fraunces,Georgia,serif; font-size:40px; line-height:0.6; height:20px;">“</div>
+        <blockquote style="margin:0; font-family:Fraunces,Georgia,serif; font-size:19px; line-height:1.45; color:#33291F;">I finally know where my money is going, without an app nagging me every day.</blockquote>
+        <figcaption style="font-size:13px; color:#6B5A4A;"><span style="font-weight:600; color:#33291F;">Maya R.</span> · New parent</figcaption>
+      </figure>
+      <figure data-reveal data-reveal-delay="120" style="margin:0; background:#FFFCF7; border:1px solid #E7DBC8; border-radius:16px; padding:28px; display:flex; flex-direction:column; gap:18px;">
+        <div style="color:#C8A24A; font-family:Fraunces,Georgia,serif; font-size:40px; line-height:0.6; height:20px;">“</div>
+        <blockquote style="margin:0; font-family:Fraunces,Georgia,serif; font-size:19px; line-height:1.45; color:#33291F;">Opened it in Google Sheets and it just worked. The dashboard is what sold me.</blockquote>
+        <figcaption style="font-size:13px; color:#6B5A4A;"><span style="font-weight:600; color:#33291F;">Daniel K.</span> · Freelancer</figcaption>
+      </figure>
+      <figure data-reveal data-reveal-delay="240" style="margin:0; background:#FFFCF7; border:1px solid #E7DBC8; border-radius:16px; padding:28px; display:flex; flex-direction:column; gap:18px;">
+        <div style="color:#C8A24A; font-family:Fraunces,Georgia,serif; font-size:40px; line-height:0.6; height:20px;">“</div>
+        <blockquote style="margin:0; font-family:Fraunces,Georgia,serif; font-size:19px; line-height:1.45; color:#33291F;">We plan our money together now. The couples budget made it painless.</blockquote>
+        <figcaption style="font-size:13px; color:#6B5A4A;"><span style="font-weight:600; color:#33291F;">Priya &amp; Sam</span> · Married in 2025</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ EMAIL CAPTURE ============ -->
+  <section id="free-template" style="background:#F3ECDF; border-top:1px solid #E7DBC8;">
+    <div data-reveal style="max-width:760px; margin:0 auto; padding:clamp(56px,7vw,88px) clamp(20px,5vw,48px); text-align:center;">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:#C2683F;">Free template</div>
+      <h2 style="margin:14px 0 0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(28px,3.8vw,44px); line-height:1.08; letter-spacing:-0.015em; color:#33291F;">One free template, plus new releases. No noise.</h2>
+      <p style="margin:16px 0 0; font-size:16px; line-height:1.6; color:#6B5A4A;">Join and we will send a spending tracker to start with today.</p>
+      <form onsubmit="return false;" style="margin:28px auto 0; max-width:460px; display:flex; gap:10px; flex-wrap:wrap;">
+        <input type="email" placeholder="you@email.com" aria-label="Email address" style="flex:1; min-width:180px; padding:14px 16px; border:1px solid #D9CAB1; border-radius:12px; background:#FFFCF7; color:#33291F; font-size:15px;">
+        <button class="btn-primary" type="submit" style="padding:14px 26px; border:none; border-radius:12px; background:#C2683F; color:#FFFCF7; font-size:15px; font-weight:600; cursor:pointer;">Get the template</button>
+      </form>
+      <div style="margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.03em; color:#6B5A4A;">Download once. Use forever. Unsubscribe anytime.</div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#33291F; color:#FFFCF7;">
+    <div style="max-width:1200px; margin:0 auto; padding:clamp(48px,6vw,72px) clamp(20px,5vw,48px) 32px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:40px;">
+        <div style="max-width:300px;">
+          <div style="display:flex; align-items:center; gap:11px; margin-bottom:16px;"><span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#C8A24A,#C2683F); display:inline-flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h7" stroke="#FFFCF7" stroke-width="1.7" stroke-linecap="round"/></svg></span><span style="font-family:Fraunces,Georgia,serif; font-size:19px; font-weight:600;">SpendFlow <span style="color:#D9CAB1;">Studio</span></span></div>
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#D9CAB1;">Calm spreadsheet templates for money, weddings, real estate, and life. Download once. Use forever.</p>
+          <div style="margin-top:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.04em; color:#9DAE8C;">4.9 average · 12,000+ downloads</div>
+        </div>
+        <div><div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C8A24A; margin-bottom:16px;">Shop</div><div style="display:flex; flex-direction:column; gap:11px;"><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">All products</a><a class="footer-link" href="bundles.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Bundles</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">New releases</a><a class="footer-link" href="index.html#free-template" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Free template</a></div></div>
+        <div><div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C8A24A; margin-bottom:16px;">Categories</div><div style="display:flex; flex-direction:column; gap:11px;"><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Money</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Real Estate</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Investing</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Wedding · Life &amp; Home</a></div></div>
+        <div><div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C8A24A; margin-bottom:16px;">Newsletter</div><p style="margin:0 0 14px; font-size:14px; line-height:1.55; color:#D9CAB1;">One free template, plus new releases. No noise.</p><form onsubmit="return false;" style="display:flex; gap:8px; flex-wrap:wrap;"><input type="email" placeholder="you@email.com" aria-label="Email address" style="flex:1; min-width:150px; padding:11px 13px; border:1px solid #5A4A3A; border-radius:10px; background:#3D3227; color:#FFFCF7; font-size:14px;"><button class="footer-get" type="submit" style="padding:11px 18px; border:none; border-radius:10px; background:#C2683F; color:#FFFCF7; font-size:14px; font-weight:600; cursor:pointer;">Get it</button></form></div>
+      </div>
+      <div style="margin-top:44px; padding-top:22px; border-top:1px solid #4A3D30; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#9C8C79;">© 2026 SpendFlow Studio <span style="color:#C4A882;">·</span> Instant download <span style="color:#C4A882;">·</span> Lifetime updates</div>
+        <div style="display:flex; gap:18px; flex-wrap:wrap;"><a class="footer-link" href="privacy.html" style="font-size:13px; color:#B7A891; text-decoration:none;">Privacy</a><a class="footer-link" href="terms.html" style="font-size:13px; color:#B7A891; text-decoration:none;">Terms</a><a class="footer-link" href="license.html" style="font-size:13px; color:#B7A891; text-decoration:none;">License</a><a class="footer-link" href="contact.html" style="font-size:13px; color:#B7A891; text-decoration:none;">Contact</a></div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ============ MOTION (vanilla, opt-in, degrades gracefully) ============ -->
+<script>
+(function(){
+  var docEl = document.documentElement;
+  if (!docEl.classList.contains('motion-ok')) return;   // no JS motion => everything stays visible
+
+  var reveals = [].slice.call(document.querySelectorAll('[data-reveal]'));
+  var counts  = [].slice.call(document.querySelectorAll('[data-count-to]'));
+
+  function showAll(){ reveals.forEach(function(el){ el.classList.add('is-revealed'); }); }
+
+  function reveal(el){
+    if (el.__shown) return; el.__shown = true;
+    var dly = (+el.getAttribute('data-reveal-delay')) || 0;
+    el.style.transitionDelay = dly + 'ms';
+    el.classList.add('is-revealed');
+  }
+
+  function fmt(v, dec){ return dec > 0 ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US'); }
+  function runCount(el){
+    if (el.__counted) return; el.__counted = true;
+    var to  = parseFloat(el.getAttribute('data-count-to'));
+    var dec = (+el.getAttribute('data-count-decimals')) || 0;
+    var suf = el.getAttribute('data-count-suffix') || '';
+    var dur = 1300, t0 = performance.now();
+    function step(now){
+      var p = Math.min(1, (now - t0) / dur);
+      var e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(to * e, dec) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    setTimeout(function(){ el.textContent = fmt(to, dec) + suf; }, 1500);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    // Old browser: no observers. Reveal everything, leave counts at final value.
+    showAll();
+  } else {
+    counts.forEach(function(el){ el.textContent = '0' + (el.getAttribute('data-count-suffix') || ''); });
+
+    var ioR = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ reveal(en.target); ioR.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(function(el){ ioR.observe(el); });
+
+    var ioC = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ runCount(en.target); ioC.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -5% 0px' });
+    counts.forEach(function(el){ ioC.observe(el); });
+
+    // Safety net: if anything above the fold was missed, reveal after a beat.
+    setTimeout(function(){
+      reveals.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if (!el.__shown && r.top < (window.innerHeight || 800)) reveal(el);
+      });
+      counts.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if (!el.__counted && r.top < (window.innerHeight || 800)) runCount(el);
+      });
+    }, 1400);
+  }
+
+  // Hero one-time draw + grow (above the fold; run once).
+  setTimeout(function(){
+    [].forEach.call(document.querySelectorAll('[data-draw]'), function(arc){
+      var len = parseFloat(arc.getAttribute('data-draw'));
+      arc.style.transition = 'none';
+      arc.style.strokeDashoffset = len;
+      void arc.getBoundingClientRect();
+      arc.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(.3,.8,.3,1)';
+      arc.style.transitionDelay = ((+arc.getAttribute('data-draw-delay')) || 0) + 'ms';
+      requestAnimationFrame(function(){ arc.style.strokeDashoffset = '0'; });
+    });
+    [].forEach.call(document.querySelectorAll('[data-grow]'), function(bar){
+      var w = bar.getAttribute('data-grow');
+      bar.style.transition = 'none';
+      bar.style.width = '0%';
+      void bar.getBoundingClientRect();
+      bar.style.transition = 'width 1.3s cubic-bezier(.3,.8,.3,1)';
+      bar.style.transitionDelay = ((+bar.getAttribute('data-grow-delay')) || 0) + 'ms';
+      requestAnimationFrame(function(){ bar.style.width = w; });
+    });
+  }, 160);
+})();
+</script>
+
+</body>
+</html>
