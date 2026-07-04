@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop - SpendFlow Studio</title>
+  <meta name="description" content="Fifty calm spreadsheets for money, weddings, real estate, and investing. Pick one, or bundle and save.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>
+    (function(){var e=document.documentElement;e.className+=' has-js';try{if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)){e.className+=' motion-ok';}}catch(x){}})();
+  </script>
+</head>
+<body>
+
+<div style="background:#FBF5EC; min-height:100vh;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(251,245,236,0.94); backdrop-filter:saturate(1.1); border-bottom:1px solid #E7DBC8;">
+    <div style="max-width:1200px; margin:0 auto; padding:14px clamp(20px,5vw,48px); display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+      <a href="index.html" style="display:flex; align-items:center; gap:11px; text-decoration:none; margin-right:auto;">
+        <span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#C8A24A 0%,#C2683F 100%); display:inline-flex; align-items:center; justify-content:center; box-shadow:0 3px 8px -3px rgba(194,104,63,0.6);"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h7" stroke="#FFFCF7" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+        <span style="font-family:Fraunces,Georgia,serif; font-size:19px; font-weight:600; letter-spacing:-0.01em;"><span style="color:#33291F;">SpendFlow</span> <span style="color:#6B5A4A;">Studio</span></span>
+      </a>
+      <nav style="display:flex; align-items:center; gap:26px;">
+        <a class="nav-link" href="shop.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Shop</a>
+        <a class="nav-link" href="bundles.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Bundles</a>
+        <a class="nav-link" href="shop.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Money</a>
+        <a class="nav-link" href="shop.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">Life &amp; Home</a>
+        <a class="nav-link" href="about.html" style="font-size:15px; color:#6B5A4A; text-decoration:none;">About</a>
+      </nav>
+      <button class="cart-btn" aria-label="Cart" style="position:relative; width:40px; height:40px; border:1px solid #E7DBC8; background:#FFFCF7; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 7h12l-1 12H7L6 7Z" stroke="#33291F" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 7a3 3 0 0 1 6 0" stroke="#33291F" stroke-width="1.6"/></svg><span style="position:absolute; top:-6px; right:-6px; min-width:17px; height:17px; padding:0 4px; border-radius:999px; background:#C2683F; color:#FFFCF7; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; display:inline-flex; align-items:center; justify-content:center;">2</span></button>
+    </div>
+  </header>
+
+  <!-- ============ TITLE BAND ============ -->
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(40px,5vw,64px) clamp(20px,5vw,48px) clamp(24px,3vw,32px);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:#C2683F;">The shop</div>
+    <h1 style="margin:16px 0 0; font-family:Fraunces,Georgia,serif; font-weight:600; font-size:clamp(38px,5.4vw,60px); line-height:1.02; letter-spacing:-0.02em; color:#33291F;">All products</h1>
+    <p style="margin:16px 0 0; max-width:44ch; font-size:17px; line-height:1.6; color:#6B5A4A;">Fifty calm spreadsheets for money, weddings, real estate, and investing. Pick one, or bundle and save.</p>
+    <div style="margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:0.03em; color:#6B5A4A;">50 templates. Excel and Google Sheets.</div>
+  </section>
+
+  <!-- ============ CONTROLS ============ -->
+  <section style="max-width:1200px; margin:0 auto; padding:0 clamp(20px,5vw,48px);">
+    <div style="padding:18px 0; border-top:1px solid #E7DBC8; border-bottom:1px solid #E7DBC8; display:flex; gap:20px 28px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+      <div style="display:flex; flex-wrap:wrap; gap:9px;">
+          <button class="chip is-active" type="button" data-filter="all" data-label="All">All<span class="chip-count">50</span></button>
+          <button class="chip" type="button" data-filter="Money" data-label="Money">Money<span class="chip-count">15</span></button>
+          <button class="chip" type="button" data-filter="Bundle" data-label="Bundles">Bundles<span class="chip-count">7</span></button>
+          <button class="chip" type="button" data-filter="Real Estate" data-label="Real Estate">Real Estate<span class="chip-count">8</span></button>
+          <button class="chip" type="button" data-filter="Investing" data-label="Investing">Investing<span class="chip-count">6</span></button>
+          <button class="chip" type="button" data-filter="Wedding" data-label="Wedding">Wedding<span class="chip-count">6</span></button>
+          <button class="chip" type="button" data-filter="Life &amp; Home" data-label="Life &amp; Home">Life &amp; Home<span class="chip-count">8</span></button>
+      </div>
+      <div class="shop-sort" style="display:inline-flex; align-items:center; gap:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#6B5A4A;">Sort</span>
+        <div class="sortwrap">
+          <button class="sortbtn is-active" type="button" data-sort="featured">Featured</button>
+          <button class="sortbtn" type="button" data-sort="lowhigh">Price: low to high</button>
+          <button class="sortbtn" type="button" data-sort="highlow">Price: high to low</button>
+        </div>
+      </div>
+    </div>
+    <div class="shop-result" style="margin-top:16px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.03em; color:#6B5A4A;">Showing all 50 templates</div>
+  </section>
+
+  <!-- ============ GRID ============ -->
+  <section style="max-width:1200px; margin:0 auto; padding:clamp(24px,3vw,32px) clamp(20px,5vw,48px) clamp(56px,7vw,88px);">
+    <div id="shop-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,258px),1fr)); gap:24px; align-items:start;">
+      <a class="card-link--2" href="product.html" data-cat="Bundle" data-price="28.99" data-idx="0">
+        <article class="pcard pcard--bundles">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Bundle</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Self-Employed Money System</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Everything a self-employed person needs to run their money in one system.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$28.99</span>
+              <span class="pcard__original">$39.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="21.99" data-idx="1">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Etsy Seller Profit Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Track every Etsy sale, fee, and profit so you always know what you really earned.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$21.99</span>
+              <span class="pcard__original">$29.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Wedding" data-price="25.99" data-idx="2">
+        <article class="pcard pcard--wedding">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Wedding</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wedding Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan the whole wedding in one place. Budget, guest list, and vendors together.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$25.99</span>
+              <span class="pcard__original">$34.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="9" data-idx="3">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">International Move Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan a move abroad without missing a cost. Built for expats and relocations.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Investing" data-price="10.99" data-idx="4">
+        <article class="pcard pcard--investing">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Investing</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wealth Command Center</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">One honest Money Health Score for your whole financial life, plus a FIRE finish line.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.99</span>
+              <span class="pcard__original">$14.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="12" data-idx="5">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">World Cup Travel Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan your World Cup trip across the USA, Canada, and Mexico without blowing the budget.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$12.00</span>
+              <span class="pcard__original">$16.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="18" data-idx="6">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Annual Budget</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">A full year of budgeting with debt payoff and sinking funds built in.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$18.00</span>
+              <span class="pcard__original">$24.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Bundle" data-price="28.99" data-idx="7">
+        <article class="pcard pcard--bundles">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Bundle</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Real Estate Bundle</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Five real estate sheets covering buying, hunting, renovating, moving, and upkeep.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$28.99</span>
+              <span class="pcard__original">$39.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Wedding" data-price="8.99" data-idx="8">
+        <article class="pcard pcard--wedding">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Wedding</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wedding Day Timeline</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Build the wedding day minute by minute with a live, printable schedule.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="6" data-idx="9">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Home Maintenance Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Score your home's health and know when each thing is due for repair or replacement.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$6.00</span>
+              <span class="pcard__original">$8.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Investing" data-price="9" data-idx="10">
+        <article class="pcard pcard--investing">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Investing</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Dividend Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">See your dividend income grow and know your real portfolio yield at a glance.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="21" data-idx="11">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Book Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Log every book you read, get a reading score, and see your year wrapped up.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$21.00</span>
+              <span class="pcard__original">$29.00</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="10" data-idx="12">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Couples Budget</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Share money as a couple. Split bills fairly and track joint finances together.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.00</span>
+              <span class="pcard__original">$13.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Wedding" data-price="9" data-idx="13">
+        <article class="pcard pcard--wedding">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Wedding</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Vendor Contract Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Track every vendor contract, payment date, and risk before the big day.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Bundle" data-price="25" data-idx="14">
+        <article class="pcard pcard--bundles">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Bundle</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wedding Planner Bundle</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Four wedding sheets in one. Budget, guests, vendor risk, and the day timeline.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$25.00</span>
+              <span class="pcard__original">$34.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="7" data-idx="15">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Moving Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Take the stress out of moving with a box inventory and a real cost calculator.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$7.00</span>
+              <span class="pcard__original">$9.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Investing" data-price="8.99" data-idx="16">
+        <article class="pcard pcard--investing">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Investing</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Investment Portfolio Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">See everything you own in one view and watch your portfolio move over time.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="8.99" data-idx="17">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Pet Care Planner Pro</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Keep your pet's health records, vaccinations, and budget in one calm place.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="8.99" data-idx="18">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Debt Payoff Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Pick snowball or avalanche and watch your costliest debt fall first.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Wedding" data-price="8.99" data-idx="19">
+        <article class="pcard pcard--wedding">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Wedding</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wedding Guest List</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Manage the guest list, seating chart, and RSVPs without the spreadsheet mess.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="9" data-idx="20">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Renovation Budget</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Keep a renovation on budget and catch cost overruns before they hurt.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Investing" data-price="10.99" data-idx="21">
+        <article class="pcard pcard--investing">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Investing</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">FIRE Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">See your path to financial independence and the year you could retire early.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.99</span>
+              <span class="pcard__original">$14.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Bundle" data-price="25" data-idx="22">
+        <article class="pcard pcard--bundles">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Bundle</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Couples Life Bundle</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Wedding, real estate, and tax planning bundled for couples building a life together.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$25.00</span>
+              <span class="pcard__original">$34.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="10" data-idx="23">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Baby Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan for your baby with a hospital bag checklist, nursery budget, and pregnancy tracker.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.00</span>
+              <span class="pcard__original">$13.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="10.99" data-idx="24">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Client Profitability Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Know which clients actually pay off. Track project margins and profit per client.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.99</span>
+              <span class="pcard__original">$14.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Wedding" data-price="8.99" data-idx="25">
+        <article class="pcard pcard--wedding">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Wedding</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wedding Budget Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Keep the wedding budget, vendor payments, and RSVPs together in one tracker.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="8" data-idx="26">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">House Hunting Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Compare homes side by side and let a match score point to the right one.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.00</span>
+              <span class="pcard__original">$10.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Investing" data-price="7" data-idx="27">
+        <article class="pcard pcard--investing">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Investing</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Net Worth Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Add up everything you own and owe and watch your net worth climb.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$7.00</span>
+              <span class="pcard__original">$9.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="9" data-idx="28">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Travel Budget Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan any trip in any currency and always know what you have left to spend.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Bundle" data-price="25" data-idx="29">
+        <article class="pcard pcard--bundles">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Bundle</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wealth Bundle</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Four wealth trackers in one. Net worth, budget, sinking funds, and investments.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$25.00</span>
+              <span class="pcard__original">$34.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="10" data-idx="30">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Small Business Finance</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Run your small business money with Profit First, a tax reserve, and a clear P&amp;L.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.00</span>
+              <span class="pcard__original">$13.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Wedding" data-price="8.99" data-idx="31">
+        <article class="pcard pcard--wedding">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Wedding</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Wedding Budget Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan the wedding budget early and forecast the savings you'll need in time.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="8.99" data-idx="32">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Home Affordability Calculator</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">See exactly what home you can afford and compare mortgages before you commit.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Investing" data-price="9" data-idx="33">
+        <article class="pcard pcard--investing">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Investing</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Investment Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Track stocks, ETFs, and crypto together and see your real mix.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="8.99" data-idx="34">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Pet Cost Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Know the true lifetime cost of your pet, from insurance to the emergency fund.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="6" data-idx="35">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Paycheck Budget Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Budget every paycheck with a zero based plan that pays you first.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$6.00</span>
+              <span class="pcard__original">$8.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="8" data-idx="36">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Moving Cost Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Compare doing it yourself with hiring movers and see the real cost of each.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.00</span>
+              <span class="pcard__original">$10.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Bundle" data-price="17.99" data-idx="37">
+        <article class="pcard pcard--bundles">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Bundle</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">The Money Bundle</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Spending, savings, bills, and debt. The four money trackers most people actually use.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$17.99</span>
+              <span class="pcard__original">$24.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="9" data-idx="38">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">New Baby Financial Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan your baby's first year, from daycare costs to a college savings head start.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="10.99" data-idx="39">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Freelancer Finance Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Handle freelance income swings with a tax reserve and a steady hourly rate.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.99</span>
+              <span class="pcard__original">$14.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Real Estate" data-price="9" data-idx="40">
+        <article class="pcard pcard--realestate">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Real Estate</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Rental Property Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Track every rental property's income, expenses, and return in one place.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$9.00</span>
+              <span class="pcard__original">$12.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Life &amp; Home" data-price="7" data-idx="41">
+        <article class="pcard pcard--lifehome">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Life &amp; Home</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Travel Budget Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Plan a vacation and know the full cost before you book a thing.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$7.00</span>
+              <span class="pcard__original">$9.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="8" data-idx="42">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Tax Planning Spreadsheet</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Estimate your taxes with the 2026 federal brackets built right in.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.00</span>
+              <span class="pcard__original">$10.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="7" data-idx="43">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Debt Free Planner</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Pick your payoff method and follow a clear road to debt free.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$7.00</span>
+              <span class="pcard__original">$9.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Bundle" data-price="10.99" data-idx="44">
+        <article class="pcard pcard--bundles">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Bundle</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">World Cup Fan Pack 2026</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Two World Cup party games in one. Run a sweepstake and a match predictor with friends.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$10.99</span>
+              <span class="pcard__original">$14.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="5.99" data-idx="45">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Bill Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Never miss a bill or forget a subscription you meant to cancel.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$5.99</span>
+              <span class="pcard__original">$7.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="6" data-idx="46">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Savings Goal Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Set savings goals and watch each one fill up toward the finish line.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$6.00</span>
+              <span class="pcard__original">$8.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="5.99" data-idx="47">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Spending Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">A simple, friendly spending tracker for anyone new to budgeting.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$5.99</span>
+              <span class="pcard__original">$7.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="6" data-idx="48">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Sinking Funds Tracker</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Set aside money for the big irregular costs before they surprise you.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$6.00</span>
+              <span class="pcard__original">$8.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+      <a class="card-link--2" href="product.html" data-cat="Money" data-price="8.99" data-idx="49">
+        <article class="pcard pcard--money">
+          <div class="pcard__field">
+            <svg class="pcard__grid" viewBox="0 0 320 190" preserveAspectRatio="none" aria-hidden="true"><g><line x1="0" y1="38" x2="320" y2="38"/><line x1="0" y1="76" x2="320" y2="76"/><line x1="0" y1="114" x2="320" y2="114"/><line x1="0" y1="152" x2="320" y2="152"/><line x1="210" y1="0" x2="210" y2="190"/><line x1="265" y1="0" x2="265" y2="190"/></g></svg>
+            <div class="pcard__top">
+              <span class="pcard__eyebrow">Money</span>
+              <svg class="pcard__icon pcard__icon--bundle" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><rect x="9" y="15" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="13" y="10" width="27" height="20" rx="3" stroke-width="1.6"/><rect x="17" y="5" width="27" height="20" rx="3" stroke-width="1.6"/></svg>
+              <svg class="pcard__icon pcard__icon--single" width="50" height="50" viewBox="0 0 50 50" fill="none" aria-hidden="true"><circle class="ring-track" cx="25" cy="25" r="18" stroke-width="5"/><circle class="ring-fill" cx="25" cy="25" r="18" stroke-width="5" stroke-linecap="round" stroke-dasharray="72 114" transform="rotate(-90 25 25)"/></svg>
+            </div>
+            <div class="pcard__titlewrap">
+              <h3 class="pcard__title">Couples Budget System</h3>
+              <div class="pcard__meta">SpendFlow Studio · Excel · Sheets</div>
+            </div>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__desc">Manage money together as a couple with shared budgets and fair bill splits.</p>
+            <div class="pcard__prices">
+              <span class="pcard__launch">$8.99</span>
+              <span class="pcard__original">$11.99</span>
+              <span class="pcard__badge"><span class="pcard__badge-dot"></span>Launch price</span>
+            </div>
+            <button class="pcard__cart" type="button">Add to Cart</button>
+          </div>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#33291F; color:#FFFCF7;">
+    <div style="max-width:1200px; margin:0 auto; padding:clamp(48px,6vw,72px) clamp(20px,5vw,48px) 32px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:40px;">
+        <div style="max-width:300px;">
+          <div style="display:flex; align-items:center; gap:11px; margin-bottom:16px;"><span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#C8A24A,#C2683F); display:inline-flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h7" stroke="#FFFCF7" stroke-width="1.7" stroke-linecap="round"/></svg></span><span style="font-family:Fraunces,Georgia,serif; font-size:19px; font-weight:600;">SpendFlow <span style="color:#D9CAB1;">Studio</span></span></div>
+          <p style="margin:0; font-size:14px; line-height:1.6; color:#D9CAB1;">Calm spreadsheet templates for money, weddings, real estate, and life. Download once. Use forever.</p>
+          <div style="margin-top:16px; font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:0.04em; color:#9DAE8C;">4.9 average · 12,000+ downloads</div>
+        </div>
+        <div><div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C8A24A; margin-bottom:16px;">Shop</div><div style="display:flex; flex-direction:column; gap:11px;"><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">All products</a><a class="footer-link" href="bundles.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Bundles</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">New releases</a><a class="footer-link" href="index.html#free-template" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Free template</a></div></div>
+        <div><div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C8A24A; margin-bottom:16px;">Categories</div><div style="display:flex; flex-direction:column; gap:11px;"><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Money</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Real Estate</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Investing</a><a class="footer-link" href="shop.html" style="font-size:14px; color:#EDE4D6; text-decoration:none;">Wedding · Life &amp; Home</a></div></div>
+        <div><div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#C8A24A; margin-bottom:16px;">Newsletter</div><p style="margin:0 0 14px; font-size:14px; line-height:1.55; color:#D9CAB1;">One free template, plus new releases. No noise.</p><form onsubmit="return false;" style="display:flex; gap:8px; flex-wrap:wrap;"><input type="email" placeholder="you@email.com" aria-label="Email address" style="flex:1; min-width:150px; padding:11px 13px; border:1px solid #5A4A3A; border-radius:10px; background:#3D3227; color:#FFFCF7; font-size:14px;"><button class="footer-get" type="submit" style="padding:11px 18px; border:none; border-radius:10px; background:#C2683F; color:#FFFCF7; font-size:14px; font-weight:600; cursor:pointer;">Get it</button></form></div>
+      </div>
+      <div style="margin-top:44px; padding-top:22px; border-top:1px solid #4A3D30; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center;">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#9C8C79;">© 2026 SpendFlow Studio <span style="color:#C4A882;">·</span> Instant download <span style="color:#C4A882;">·</span> Lifetime updates</div>
+        <div style="display:flex; gap:18px; flex-wrap:wrap;"><a class="footer-link" href="privacy.html" style="font-size:13px; color:#B7A891; text-decoration:none;">Privacy</a><a class="footer-link" href="terms.html" style="font-size:13px; color:#B7A891; text-decoration:none;">Terms</a><a class="footer-link" href="license.html" style="font-size:13px; color:#B7A891; text-decoration:none;">License</a><a class="footer-link" href="contact.html" style="font-size:13px; color:#B7A891; text-decoration:none;">Contact</a></div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var grid=document.getElementById("shop-grid");
+  if(!grid) return;
+  var cards=[].slice.call(grid.querySelectorAll(".card-link--2"));
+  var chips=[].slice.call(document.querySelectorAll(".chip"));
+  var sorts=[].slice.call(document.querySelectorAll(".sortbtn"));
+  var resultEl=document.querySelector(".shop-result");
+  var state={filter:"all",label:"All",sort:"featured"};
+  function apply(){
+    var n=0;
+    cards.forEach(function(c){
+      var show=(state.filter==="all")||(c.getAttribute("data-cat")===state.filter);
+      c.style.display=show?"":"none"; if(show)n++;
+    });
+    var vis=cards.filter(function(c){return c.style.display!=="none";});
+    vis.sort(function(a,b){
+      if(state.sort==="lowhigh")return parseFloat(a.getAttribute("data-price"))-parseFloat(b.getAttribute("data-price"));
+      if(state.sort==="highlow")return parseFloat(b.getAttribute("data-price"))-parseFloat(a.getAttribute("data-price"));
+      return parseInt(a.getAttribute("data-idx"),10)-parseInt(b.getAttribute("data-idx"),10);
+    });
+    vis.forEach(function(c){grid.appendChild(c);});
+    if(resultEl){
+      resultEl.textContent = state.filter==="all" ? ("Showing all "+n+" templates") : ("Showing "+n+" "+state.label+" "+(n===1?"template":"templates"));
+    }
+  }
+  chips.forEach(function(ch){ch.addEventListener("click",function(){
+    chips.forEach(function(x){x.classList.remove("is-active");}); ch.classList.add("is-active");
+    state.filter=ch.getAttribute("data-filter"); state.label=ch.getAttribute("data-label"); apply();
+  });});
+  sorts.forEach(function(sb){sb.addEventListener("click",function(){
+    sorts.forEach(function(x){x.classList.remove("is-active");}); sb.classList.add("is-active");
+    state.sort=sb.getAttribute("data-sort"); apply();
+  });});
+})();
+</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

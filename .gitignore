@@ -1,0 +1,14 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / tooling
+.claude/
+node_modules/
+
+# Defensive: non-deployable source artifacts must never be committed,
+# even if accidentally copied into this folder.
+*.zip
+SpendFlow Home.html
+Spendflow website prelaunch tasks.txt
