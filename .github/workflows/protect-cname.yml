@@ -1,0 +1,55 @@
+name: Protect CNAME
+
+# Guards the GitHub Pages custom-domain binding.
+# The repo root must contain a CNAME file with exactly "spendflowstudio.com".
+# If a future commit deletes or alters it, the custom domain (https://spendflowstudio.com)
+# breaks and 404s. This check fails loudly so that never happens silently.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-cname:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify repo-root CNAME
+        run: |
+          set -euo pipefail
+          EXPECTED="spendflowstudio.com"
+
+          if [ ! -f ./CNAME ]; then
+            echo "::error::Repo-root CNAME file is MISSING."
+            echo ""
+            echo "GitHub Pages requires a file named 'CNAME' at the repository root whose"
+            echo "content is exactly '${EXPECTED}'. Without it, the custom-domain binding"
+            echo "breaks and https://${EXPECTED} will start returning 404."
+            echo ""
+            echo "To restore: create a file named 'CNAME' at the repo root containing only:"
+            echo "    ${EXPECTED}"
+            exit 1
+          fi
+
+          # Trim surrounding whitespace/newlines (tolerates a trailing newline or CRLF).
+          ACTUAL="$(tr -d '[:space:]' < ./CNAME)"
+
+          if [ "${ACTUAL}" != "${EXPECTED}" ]; then
+            echo "::error::Repo-root CNAME content is WRONG."
+            echo "Expected exactly: '${EXPECTED}'"
+            echo "Found (whitespace-stripped): '${ACTUAL}'"
+            echo ""
+            echo "GitHub Pages binds the custom domain to whatever this file contains."
+            echo "A wrong or empty value breaks https://${EXPECTED} (it will 404)."
+            echo ""
+            echo "To restore: set the repo-root CNAME file's content to exactly:"
+            echo "    ${EXPECTED}"
+            exit 1
+          fi
+
+          echo "OK: repo-root CNAME is present and contains exactly '${EXPECTED}'."
+          echo "The GitHub Pages custom-domain binding is protected."
