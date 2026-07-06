@@ -177,6 +177,18 @@ img{max-width:100%}
 .pcard__title{margin:0; font-family:var(--serif); font-weight:600; font-size:25px; line-height:1.12; letter-spacing:-.01em; color:var(--ink)}
 .pcard__meta{margin-top:9px; font-family:var(--mono); font-size:9px; letter-spacing:.13em; text-transform:uppercase; color:var(--eyebrow); opacity:.72}
 
+/* ---- Real product photo in the card media field (reusable across the 50-product rollout) ----
+   Opt in per card: add class "pcard--photo" to the .pcard <article> and drop an
+   <img class="pcard__photo"> as the first child of .pcard__field. The photo fills the
+   190px field behind the existing eyebrow/title text; a bottom-weighted scrim keeps the
+   light title legible over bright images; the decorative grid + icon are hidden as redundant. */
+.pcard__photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; display:block}
+.pcard--photo .pcard__field::after{content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:linear-gradient(180deg, rgba(24,17,10,.42) 0%, rgba(24,17,10,0) 34%, rgba(24,17,10,0) 52%, rgba(24,17,10,.78) 100%)}
+.pcard--photo .pcard__grid,
+.pcard--photo .pcard__icon{display:none}
+.pcard--photo .pcard__title{text-shadow:0 1px 12px rgba(24,17,10,.55)}
+
 .pcard__body{padding:18px 20px 20px; display:flex; flex-direction:column; gap:14px; flex:1}
 .pcard__desc{margin:0; font-size:13.5px; line-height:1.55; color:var(--bodySub)}
 .pcard__prices{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
