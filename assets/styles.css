@@ -188,6 +188,20 @@ img{max-width:100%}
 .pcard__cart:hover{background:#AD5A34}
 .pcard__cart:active{transform:scale(.99)}
 
+/* ---- Photo card (opt-in): full square hero image on top, all text below --------
+   Reusable pattern for products #2–50. To adopt: add `pcard--photo` to the
+   article, drop assets/img/<idx>-<slug>/hero.webp (square, e.g. 794x794), point the
+   <img class="pcard__photo"> at it, and place the .pcard__titlewrap inside .pcard__body.
+   No per-card CSS. Because source images are 1:1, the square media area shows the
+   whole graphic with nothing cropped. */
+.pcard--photo .pcard__field{height:auto; aspect-ratio:1/1; padding:0; display:block}
+.pcard--photo .pcard__photo{display:block; width:100%; height:100%; object-fit:cover; object-position:center}
+/* decorative placeholder art is kept in the markup but hidden on photo cards (reversible) */
+.pcard--photo .pcard__grid,
+.pcard--photo .pcard__top{display:none}
+/* title/meta now sit in the text strip below the image, not overlaying it */
+.pcard--photo .pcard__titlewrap{margin-top:0}
+
 /* ============================================================
    Motion  (opt-in; content fully visible without JS)
    Only active when <html class="motion-ok"> (set by inline script
